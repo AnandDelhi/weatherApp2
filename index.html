@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WeatherApp by An@nD</title>
+    <script type="module" defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tempBar.css" />
+    <link rel="stylesheet" href="city.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="weatherPanel">
+        <div class="searchBar">
+          <input class="searchBox" type="text" placeholder="type any city" />
+          <button class="searchButton">🔍</button>
+        </div>
+        <div class="tempBar">
+          <div class="gauge">
+            <div class="gaugeBody"></div>
+            <div class="gaugeCover">
+              <div class="temperature">
+                25°C
+                <div class="feelsLike">feels like 29°C</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weatherIcon"></div>
+      </div>
+      <div class="cityPanel">
+        <div class="cityName">New Delhi</div>
+        <div class="dateTime">5:43 PM, 17 July 2022</div>
+        <div class="weatherData">
+          <div class="condition">Condition</div>
+          <div class="conditionData">Mist</div>
+          <div class="humidity">Humidity</div>
+          <div class="humidityData">64%</div>
+          <div class="uv">UV Index</div>
+          <div class="uvData">8</div>
+          <div class="visibility">Visibility</div>
+          <div class="visibilityData">7 km</div>
+          <div class="wind">Wind Speed</div>
+          <div class="windData">5 kmph from NorthEast</div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">©️ Anand Kumar Mehta</div>
+  </body>
+</html>

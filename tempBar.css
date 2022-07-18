@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
+
+:root {
+  --color-primary1: #8e05c2;
+  --color-primary2: #700b97;
+  --color-primary3: #3e065f;
+  --color-primary4: #000000;
+  --color-secondary1: #42c2ff;
+  --color-secondary2: #85f4ff;
+  --color-seconary3: #b8fff9;
+  --color-secondary4: #effffd;
+  --curve: 10px;
+  --transparency-level1: 90%;
+  --font: "Rajdhani", sans-serif;
+}
+
+.tempBar {
+  position: absolute;
+  background-color: var(--color-primary4);
+  width: 28rem;
+  max-width: 648px;
+  height: 14rem;
+  margin-top: 12vh;
+  border: none;
+  border-radius: var(--curve);
+  opacity: 75%;
+}
+.gauge {
+  position: relative;
+  width: 100%;
+  max-width: 648px;
+  height: 100%;
+  border-top-left-radius: 100% 200%;
+  border-top-right-radius: 100% 200%;
+  background-color: var(--color-secondary4);
+  overflow: hidden;
+}
+.gaugeBody {
+  position: absolute;
+  width: 100%;
+  max-width: 648px;
+  height: 100%;
+  top: 100%;
+  background-color: var(--color-secondary1);
+  transform-origin: center top;
+  transform: rotate(0.3turn);
+  transition: transform 1.5s ease-out;
+}
+.gaugeCover {
+  position: absolute;
+  background-color: var(--color-primary4);
+  width: 75%;
+  height: 150%;
+  border-radius: 50%;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.temperature {
+  position: relative;
+  background-color: var(--color-primary4);
+  height: 15rem;
+  width: 15rem;
+  text-align: center;
+  font-family: var(--font);
+  font-size: 5rem;
+  color: var(--color-secondary4);
+}
+.feelsLike {
+  position: relative;
+  font-size: 1.5rem;
+  transform: translateY(-50%);
+}

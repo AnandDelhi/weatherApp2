@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap");
+
+:root {
+  --color-primary1: #8e05c2;
+  --color-primary2: #700b97;
+  --color-primary3: #3e065f;
+  --color-primary4: #000000;
+  --color-secondary1: #42c2ff;
+  --color-secondary2: #85f4ff;
+  --color-seconary3: #b8fff9;
+  --color-secondary4: #effffd;
+  --curve: 10px;
+  --transparency-level1: 90%;
+  --font: "Rajdhani", sans-serif;
+}
+.cityPanel {
+  font-family: var(--font);
+}
+.cityName {
+  font-size: 5rem;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+.dateTime {
+  padding: 1rem;
+  padding-top: 0;
+}
+.weatherData {
+  font-family: var(--font);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+}
