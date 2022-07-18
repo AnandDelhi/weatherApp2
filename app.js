@@ -18,7 +18,7 @@ const wind = document.querySelector(".windData");
 const request = new XMLHttpRequest();
 request.open(
   "GET",
-  "http://api.weatherapi.com/v1/current.json?key=5f15584a6bc748a7bdf122443220307&q=Delhi"
+  "https://api.weatherapi.com/v1/current.json?key=5f15584a6bc748a7bdf122443220307&q=Delhi"
 );
 request.send();
 request.addEventListener("load", function () {
@@ -44,7 +44,7 @@ searchButton.addEventListener("click", function () {
   const request2 = new XMLHttpRequest();
   request2.open(
     "GET",
-    `http://api.weatherapi.com/v1/current.json?key=5f15584a6bc748a7bdf122443220307&q=${city}`
+    `https://api.weatherapi.com/v1/current.json?key=5f15584a6bc748a7bdf122443220307&q=${city}`
   );
   request2.send();
   request2.addEventListener("load", function () {
@@ -59,9 +59,10 @@ searchButton.addEventListener("click", function () {
     humidity.textContent = `${data2.current.humidity}%`;
     uv.textContent = `${data2.current.uv}`;
     visibility.textContent = `${data2.current.vis_km} km`;
-    wind.textContent = `${data2.current.wind_kph} kmph`;
+    wind.textContent = `${data2.current.wind_kph} kmph from ${data2.current.wind_dir}`;
     gaugeBody.style.transform = `rotate(${data2.current.temp_c / 100}turn)`;
     weatherIcon.style.backgroundImage = `url(${data2.current.condition.icon})`;
     container.style.backgroundImage = `url(./weather-condition-images/${data2.current.condition.text}.jpg)`;
+    console.log(container.style.backgroundImage);
   });
 });
